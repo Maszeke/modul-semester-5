@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISJARKOM</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"
+        integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="index.html" class="brand-logo">MOVE ON</a>
+
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                <i class="fas fa-bars"></i>
+            </a>
+
+            <ul class="right hide-on-med-and-down ">
+                <li><a href="index.html">PEMBUKAAN</a></li>
+                <li><a href="apsi.html">APSI</a></li>
+                <li><a href="dmkm.html">DMKM</a></li>
+                <li><a href="komstat.html">KOMSTAT</a></li>
+                <li><a href="msdm.html">MSDM</a></li>
+                <li><a href="ppk.html">PPK</a></li>
+                <li class="active"><a href="sisjarkom.html">SISJARKOM</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">PEMBUKAAN</a></li>
+        <li><a href="apsi.html">APSI</a></li>
+        <li><a href="dmkm.html">DMKM</a></li>
+        <li><a href="komstat.html">KOMSTAT</a></li>
+        <li><a href="msdm.html">MSDM</a></li>
+        <li><a href="ppk.html">PPK</a></li>
+        <li class="active"><a href="sisjarkom.html">SISJARKOM</a></li>
+    </ul>
+
+    <div class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <div class="card">
+            <div class="card-content" style="overflow-x: auto; padding: 0px;">
+                <div id="the-container">
+                    <canvas id="the-canvas"></canvas>
+                </div>
+            </div>
+            <div class="card-action center">
+                <button id="prev" class="btn waves-effect waves-light red lighten-2"><i
+                        class="fas fa-chevron-left"></i></button>
+                <span class="px-3 btn waves-effect waves-light red lighten-2">Page: <span id="page_num"></span> / <span
+                        id="page_count"></span></span>
+                <button id="next" class="btn waves-effect waves-light red lighten-2"><i
+                        class="fas fa-chevron-right"></i></button>
+                <button id="zoomin" class="btn waves-effect waves-light red lighten-2"><i
+                        class="fas fa-search-plus"></i></button>
+                <button id="zoomout" class="btn waves-effect waves-light red lighten-2"><i
+                        class="fas fa-search-minus"></i></button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+
+        // If absolute URL from the remote server is provided, configure the CORS
+        // header on that server.
+        var url = "/modul/SISJARKOM.pdf";
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
